@@ -11,9 +11,8 @@
     <form method="POST" action="/form/guardar">
         @csrf
         <div class="form-group">
-            {{-- Añado el campo de input de nombre y le añado una clase que añadirá mensaje de error en caso de haberlo--}}
             <label for="nombreEmpresa">Nombre Empresa</label>
-            <input type="text" name="companyName" class="form-control" placeholder="Introduce nombre"><br>
+            <input type="text" name="companyName" class="form-control" placeholder="Introduce nombre" value="{{ old('nombreEmpresa') }}"><br>
         </div>
         <div class="form-group">
             <label for="tipoDocumento">Tipo Documento</label>
@@ -25,19 +24,19 @@
         </div>
         <div class="form-group">
             <label for="numeroDocumento">Documento Identidad</label>
-            <input type="text" name="numeroDocumento" class="form-control" placeholder="Introduce Numero Documento"><br>
+            <input type="text" name="numeroDocumento" class="form-control" placeholder="Introduce Numero Documento" value="{{ old('numeroDocumento') }}"><br>
         </div>
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" class="form-control" placeholder="Introduce Nombre"><br>
+            <input type="text" name="nombre" class="form-control" placeholder="Introduce Nombre" value="{{ old('nombre') }}"><br>
         </div>
         <div class="form-group">
             <label for="primerApellido">Primer Apellido</label>
-            <input type="text" name="primerApellido" class="form-control" placeholder="Introduce Primer Apellido"><br>
+            <input type="text" name="primerApellido" class="form-control" placeholder="Introduce Primer Apellido" value="{{ old('primerApellido') }}"><br>
         </div>            
         <div class="form-group">
             <label for="segundoApellido">Segundo Apellido</label>
-            <input type="text" name="segundoApellido" class="form-control" placeholder="Introduce Segundo Apellido"><br>
+            <input type="text" name="segundoApellido" class="form-control" placeholder="Introduce Segundo Apellido" value="{{ old('segundoApellido') }}"><br>
         </div> 
         <div class="form-group">
             <label for="paisDocumento">País de Documento</label>
@@ -72,11 +71,11 @@
         </div>
         <div class="form-group">
             <label for="numeroTelefono">Número Teléfono</label>
-            <input type="tel" name="numeroTelefono" class="form-control" placeholder="Introduce Número Teléfono"><br>
+            <input type="tel" name="numeroTelefono" class="form-control" placeholder="Introduce Número Teléfono" value="{{ old('numeroTelefono') }}"><br>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="mail" name="email" class="form-control" placeholder="Introduce Email"><br>
+            <input type="mail" name="email" class="form-control" placeholder="Introduce Email" value="{{ old('email') }}"><br>
         </div>          
 
         <button type="submit" class="btn btn-primary">Enviar</button>
