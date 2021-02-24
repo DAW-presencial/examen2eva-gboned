@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Tutor;
 
 class TutoresController extends Controller
 {
@@ -62,6 +63,37 @@ class TutoresController extends Controller
             "numeroTelefono" => $request->numeroTelefono,
             "email" => $request->email
         ]);
+
+        $tutor1 = new Tutor;
+        $tutor1->nombreEmpresa = "Sol SA";
+        $tutor1->tipoDocumento = "dni";
+        $tutor1->numeroDocumento = "432432432D";
+        $tutor1->nombre = "Juan";
+        $tutor1->primerApellido = "Martin";
+        $tutor1->segundoApellido = "Ruiz";
+        $tutor1->paisDocumento = "España";
+        $tutor1->provincia = "Baleares";
+        $tutor1->municipio = "Palma";
+        $tutor1->estado = "Activo";
+        $tutor1->numeroTelefono = "653213456";
+        $tutor1->email = "jmartin@gmail.com";
+
+        $tutor2 = new Tutor;
+        $tutor2->nombreEmpresa = "Sol SA";
+        $tutor2->tipoDocumento = "dni";
+        $tutor2->numeroDocumento = "432432432D";
+        $tutor2->nombre = "Juan";
+        $tutor2->primerApellido = "Martin";
+        $tutor2->segundoApellido = "Ruiz";
+        $tutor2->paisDocumento = "España";
+        $tutor2->provincia = "Baleares";
+        $tutor2->municipio = "Palma";
+        $tutor2->estado = "Activo";
+        $tutor2->numeroTelefono = "653213456";
+        $tutor2->email = "jmartin@gmail.com";
+
+        $tutor1->save();
+        $tutor2->save();
 
         return $request;
     }
