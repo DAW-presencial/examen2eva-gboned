@@ -11,11 +11,11 @@
     <form method="POST" action="/form/guardar">
         @csrf
         <div class="form-group">
-            <label for="nombreEmpresa">Nombre Empresa</label>
+            <label for="nombreEmpresa">{{__("messages.nombreEmpresa")}}</label>
             <input type="text" name="companyName" class="form-control" placeholder="Introduce nombre" value="{{ old('nombreEmpresa') }}"><br>
         </div>
         <div class="form-group">
-            <label for="tipoDocumento">Tipo Documento</label>
+            <label for="tipoDocumento">{{__("messages.tipoDocumento")}}</label>
             <select class="form-control" id="tipoDocumento">
                 <option>Pasaporte</option>
                 <option>DNI</option>
@@ -23,23 +23,23 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="numeroDocumento">Documento Identidad</label>
+            <label for="numeroDocumento">{{__("messages.numeroDocumento")}}</label>
             <input type="text" name="numeroDocumento" class="form-control" placeholder="Introduce Numero Documento" value="{{ old('numeroDocumento') }}"><br>
         </div>
         <div class="form-group">
-            <label for="nombre">Nombre</label>
+            <label for="nombre">{{__("messages.nombre")}}</label>
             <input type="text" name="nombre" class="form-control" placeholder="Introduce Nombre" value="{{ old('nombre') }}"><br>
         </div>
         <div class="form-group">
-            <label for="primerApellido">Primer Apellido</label>
+            <label for="primerApellido">{{__("messages.primerApellido")}}</label>
             <input type="text" name="primerApellido" class="form-control" placeholder="Introduce Primer Apellido" value="{{ old('primerApellido') }}"><br>
         </div>            
         <div class="form-group">
-            <label for="segundoApellido">Segundo Apellido</label>
+            <label for="segundoApellido">{{__("messages.segundoApellido")}}</label>
             <input type="text" name="segundoApellido" class="form-control" placeholder="Introduce Segundo Apellido" value="{{ old('segundoApellido') }}"><br>
         </div> 
         <div class="form-group">
-            <label for="paisDocumento">País de Documento</label>
+            <label for="paisDocumento">{{__("messages.paisDocumento")}}</label>
             <select class="form-control" id="paisDocumento">
                 <option>España</option>
                 <option>Francia</option>
@@ -47,7 +47,7 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="provincia">Provincia</label>
+            <label for="provincia">{{__("messages.provincia")}}</label>
             <select class="form-control" id="provincia">
                 <option>Baleares</option>
                 <option>Bearn</option>
@@ -55,7 +55,7 @@
             </select>
         </div>     
         <div class="form-group">
-            <label for="municipio">Municipio</label>
+            <label for="municipio">{{__("messages.municipio")}}</label>
             <select class="form-control" id="municipio">
                 <option>Palma</option>
                 <option>Llucmajor</option>
@@ -63,18 +63,18 @@
             </select>
         </div>   
         <div class="form-group">
-            <label for="estado">Estado</label>
+            <label for="estado">{{__("messages.estado")}}</label>
             <select class="form-control" id="estado">
                 <option>Activo</option>
                 <option>Inactivo</option>
             </select>
         </div>
         <div class="form-group">
-            <label for="numeroTelefono">Número Teléfono</label>
+            <label for="numeroTelefono">{{__("messages.numeroTelefono")}}</label>
             <input type="tel" name="numeroTelefono" class="form-control" placeholder="Introduce Número Teléfono" value="{{ old('numeroTelefono') }}"><br>
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">{{__("messages.email")}}</label>
             <input type="mail" name="email" class="form-control" placeholder="Introduce Email" value="{{ old('email') }}"><br>
         </div>          
 
