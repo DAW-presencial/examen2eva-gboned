@@ -79,18 +79,18 @@ class TutoresController extends Controller
         $tutor1->email = "jmartin@gmail.com";
 
         $tutor2 = new Tutor;
-        $tutor2->nombreEmpresa = "Sol SA";
+        $tutor2->nombreEmpresa = "Mar SA";
         $tutor2->tipoDocumento = "dni";
-        $tutor2->numeroDocumento = "432432432D";
-        $tutor2->nombre = "Juan";
-        $tutor2->primerApellido = "Martin";
+        $tutor2->numeroDocumento = "43233432D";
+        $tutor2->nombre = "Ana";
+        $tutor2->primerApellido = "Torres";
         $tutor2->segundoApellido = "Ruiz";
         $tutor2->paisDocumento = "España";
         $tutor2->provincia = "Baleares";
         $tutor2->municipio = "Palma";
         $tutor2->estado = "Activo";
-        $tutor2->numeroTelefono = "653213456";
-        $tutor2->email = "jmartin@gmail.com";
+        $tutor2->numeroTelefono = "654423456";
+        $tutor2->email = "aruiz@gmail.com";
 
         $tutor1->save();
         $tutor2->save();
