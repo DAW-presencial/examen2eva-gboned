@@ -9,10 +9,17 @@
 <body>
 <h1>Formulario Tutor de la Empresa</h1>
     <form method="POST" action="/form/guardar">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+
         @csrf
         <div class="form-group">
             <label for="nombreEmpresa">{{__("messages.nombreEmpresa")}}</label>
             <input required type="text" name="companyName" class="form-control" placeholder="Introduce nombre" value="{{ old('nombreEmpresa') }}"><br>
+            <p>{{ $errors->first('nombreEmpresa') }}</p>
         </div>
         <div class="form-group">
             <label for="tipoDocumento">{{__("messages.tipoDocumento")}}</label>
@@ -76,6 +83,7 @@
         <div class="form-group">
             <label for="email">{{__("messages.email")}}</label>
             <input required type="mail" name="email" class="form-control" placeholder="Introduce Email" value="{{ old('email') }}"><br>
+            <p>{{ $errors->first('email') }}</p>
         </div>          
 
         <button type="submit" class="btn btn-primary">Enviar</button>
